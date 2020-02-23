@@ -1,0 +1,2196 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Source Code &mdash; Abschlussprojekt 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Testing" href="Testing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Abschlussprojekt
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Inhalte:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Aufgabenstellung.html">Aufgabenstellung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Daten.html">Daten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ergebnisse.html">Ergebnisse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Testing.html">Testing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Source Code</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Abschlussprojekt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Source Code</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Source Code.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-one">
+<span id="source-code"></span><h1>Source Code<a class="headerlink" href="#module-one" title="Permalink to this headline">¶</a></h1>
+<p><strong>Titel: Aufgabe 1</strong>
+<em>Autor: Johannes Fleisch</em>
+Beschreibung: Kurzes Programm zum Plotten des Mittelwertes der 2m-Temperatur und des Niederschlages über 1979-2019 auf einer Weltkarte.</p>
+<dl class="function">
+<dt id="one.plot_mean_rain">
+<code class="sig-prename descclassname">one.</code><code class="sig-name descname">plot_mean_rain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#one.plot_mean_rain" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten des Mittelwertes des Niederschlages über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="one.plot_mean_temp">
+<code class="sig-prename descclassname">one.</code><code class="sig-name descname">plot_mean_temp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#one.plot_mean_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten des Mittelwertes der 2m-Temperatur über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="one.read_data">
+<code class="sig-prename descclassname">one.</code><code class="sig-name descname">read_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#one.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Daten einlesen</strong></p>
+<p><em>Beschreibung: Funktion zum Lesen der netCDF-Datei</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable TEMP</dt>
+<dd class="field-odd"><p>Daten für Temperaturen</p>
+</dd>
+<dt class="field-even">Variable RAIN</dt>
+<dd class="field-even"><p>Daten für Niederschlagsraten</p>
+</dd>
+<dt class="field-odd">Method Dataset</dt>
+<dd class="field-odd"><p>Lesen der Datei</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="one.read_variables">
+<code class="sig-prename descclassname">one.</code><code class="sig-name descname">read_variables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#one.read_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Variablen definieren</strong></p>
+<p><em>Beschreibung: Funktion zum Definieren der Variablen</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable LONS</dt>
+<dd class="field-odd"><p>Längengrad</p>
+</dd>
+<dt class="field-even">Variable LATS</dt>
+<dd class="field-even"><p>Breitengrad</p>
+</dd>
+<dt class="field-odd">Variable AIRS</dt>
+<dd class="field-odd"><p>Temperatur</p>
+</dd>
+<dt class="field-even">Variable RAINS</dt>
+<dd class="field-even"><p>Niederschlagsrate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-two"></span><p><strong>Titel: Aufgabe 2</strong>
+<em>Autor: Johannes Fleisch</em>
+Beschreibung: Kurzes Programm zum Plotten der mittleren 2m-Temperaturanomalie und Niederschlagsanomalie im Jahr 2019 im Vergleich zum Mittelwert über 1979-2019 auf einer Weltkarte.</p>
+<dl class="function">
+<dt id="two.plot_anomaly_rain">
+<code class="sig-prename descclassname">two.</code><code class="sig-name descname">plot_anomaly_rain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#two.plot_anomaly_rain" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten der mittleren Niederschlagsanomalie im Jahr 2019 im Vergleich zum Mittelwert über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="two.plot_anomaly_temp">
+<code class="sig-prename descclassname">two.</code><code class="sig-name descname">plot_anomaly_temp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#two.plot_anomaly_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten der mittleren 2m-Temperaturanomalie im Jahr 2019 im Vergleich zum Mittelwert über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="two.read_data">
+<code class="sig-prename descclassname">two.</code><code class="sig-name descname">read_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#two.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Daten einlesen</strong></p>
+<p><em>Beschreibung: Funktion zum Lesen der netCDF-Datei</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable TEMP</dt>
+<dd class="field-odd"><p>Daten für Temperaturen</p>
+</dd>
+<dt class="field-even">Variable RAIN</dt>
+<dd class="field-even"><p>Daten für Niederschlagsraten</p>
+</dd>
+<dt class="field-odd">Method Dataset</dt>
+<dd class="field-odd"><p>Lesen der Datei</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="two.read_variables">
+<code class="sig-prename descclassname">two.</code><code class="sig-name descname">read_variables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#two.read_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Variablen definieren</strong></p>
+<p><em>Beschreibung: Funktion zum Definieren der Variablen</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable LONS</dt>
+<dd class="field-odd"><p>Längengrad</p>
+</dd>
+<dt class="field-even">Variable LATS</dt>
+<dd class="field-even"><p>Breitengrad</p>
+</dd>
+<dt class="field-odd">Variable AIRS</dt>
+<dd class="field-odd"><p>Temperatur</p>
+</dd>
+<dt class="field-even">Variable AIRS_A</dt>
+<dd class="field-even"><p>Temperaturanomalie</p>
+</dd>
+<dt class="field-odd">Variable RAINS</dt>
+<dd class="field-odd"><p>Niederschlagsrate</p>
+</dd>
+<dt class="field-even">Variable RAINS_A</dt>
+<dd class="field-even"><p>Niederschlagsanomalie</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-three"></span><p><strong>Titel: Aufgabe 3</strong>
+<em>Autor: Johannes Fleisch</em>
+Beschreibung: Kurzes Programm zum Plotten des Monatsmittels der 2m-Temperatur und des Niederschlages über 1979-2019 inklusive Standardabweichung.</p>
+<dl class="function">
+<dt id="three.get_april">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_april</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_april" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: April-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im März über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable april</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im April</p>
+</dd>
+<dt class="field-even">Variable april_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im April</p>
+</dd>
+<dt class="field-odd">Constant APRIL_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im April</p>
+</dd>
+<dt class="field-even">Constant APRIL_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im April</p>
+</dd>
+<dt class="field-odd">Constant APRIL_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im April</p>
+</dd>
+<dt class="field-even">Constant APRIL_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im April</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_august">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_august</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_august" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: März-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im August über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable august</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im August</p>
+</dd>
+<dt class="field-even">Variable august_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im August</p>
+</dd>
+<dt class="field-odd">Constant AUGUST_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im August</p>
+</dd>
+<dt class="field-even">Constant AUGUST_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im August</p>
+</dd>
+<dt class="field-odd">Constant AUGUST_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im August</p>
+</dd>
+<dt class="field-even">Constant AUGUST_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im August</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_december">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_december</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_december" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Dezember-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im Dezember über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable december</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Dezember</p>
+</dd>
+<dt class="field-even">Variable december_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Dezember</p>
+</dd>
+<dt class="field-odd">Constant DECEMBER_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im Dezember</p>
+</dd>
+<dt class="field-even">Constant DECEMBER_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im Dezember</p>
+</dd>
+<dt class="field-odd">Constant DECEMBER_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im Dezember</p>
+</dd>
+<dt class="field-even">Constant DECEMBER_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im Dezember</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_february">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_february</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_february" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Februar-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im Februar über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable february</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Februar</p>
+</dd>
+<dt class="field-even">Variable february_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Februar</p>
+</dd>
+<dt class="field-odd">Constant FEBRUARY_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im Februar</p>
+</dd>
+<dt class="field-even">Constant FEBRUARY_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im Februar</p>
+</dd>
+<dt class="field-odd">Constant FEBRUARY_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im Februar</p>
+</dd>
+<dt class="field-even">Constant FEBRUARY_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im Februar</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_january">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_january</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_january" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Jänner-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im Jänner über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable january</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Jänner</p>
+</dd>
+<dt class="field-even">Variable january_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Jänner</p>
+</dd>
+<dt class="field-odd">Constant JANUARY_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im Jänner</p>
+</dd>
+<dt class="field-even">Constant JANUARY_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im Jänner</p>
+</dd>
+<dt class="field-odd">Constant JANUARY_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im Jänner</p>
+</dd>
+<dt class="field-even">Constant JANUARY_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im Jänner</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_july">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_july</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_july" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Juli-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im Juli über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable july</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Juli</p>
+</dd>
+<dt class="field-even">Variable july_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Juli</p>
+</dd>
+<dt class="field-odd">Constant JULY_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im Juli</p>
+</dd>
+<dt class="field-even">Constant JULY_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im Juli</p>
+</dd>
+<dt class="field-odd">Constant JULY_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im Juli</p>
+</dd>
+<dt class="field-even">Constant JULY_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im Juli</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_june">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_june</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_june" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Juni-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im Juni über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable june</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Juni</p>
+</dd>
+<dt class="field-even">Variable june_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Juni</p>
+</dd>
+<dt class="field-odd">Constant JUNE_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im Juni</p>
+</dd>
+<dt class="field-even">Constant JUNE_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im Juni</p>
+</dd>
+<dt class="field-odd">Constant JUNE_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im Juni</p>
+</dd>
+<dt class="field-even">Constant JUNE_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im Juni</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_march">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_march</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_march" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: März-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im März über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable march</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im März</p>
+</dd>
+<dt class="field-even">Variable march_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im März</p>
+</dd>
+<dt class="field-odd">Constant MARCH_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im März</p>
+</dd>
+<dt class="field-even">Constant MARCH_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im März</p>
+</dd>
+<dt class="field-odd">Constant MARCH_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im März</p>
+</dd>
+<dt class="field-even">Constant MARCH_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im März</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_may">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_may</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_may" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Mai-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im Mai über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable may</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Mai</p>
+</dd>
+<dt class="field-even">Variable may_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Mai</p>
+</dd>
+<dt class="field-odd">Constant MAY_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im Mai</p>
+</dd>
+<dt class="field-even">Constant MAY_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im Mai</p>
+</dd>
+<dt class="field-odd">Constant MAY_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im Mai</p>
+</dd>
+<dt class="field-even">Constant MAY_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im Mai</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_november">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_november</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_november" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: November-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im November über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable november</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im November</p>
+</dd>
+<dt class="field-even">Variable november_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im November</p>
+</dd>
+<dt class="field-odd">Constant NOVEMBER_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im November</p>
+</dd>
+<dt class="field-even">Constant NOVEMBER_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im November</p>
+</dd>
+<dt class="field-odd">Constant NOVEMBER_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im November</p>
+</dd>
+<dt class="field-even">Constant NOVEMBER_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im November</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_october">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_october</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_october" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Oktober-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im Oktober über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable october</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Oktober</p>
+</dd>
+<dt class="field-even">Variable october_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Oktober</p>
+</dd>
+<dt class="field-odd">Constant OCTOBER_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im Oktober</p>
+</dd>
+<dt class="field-even">Constant OCTOBER_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im Oktober</p>
+</dd>
+<dt class="field-odd">Constant OCTOBER_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im Oktober</p>
+</dd>
+<dt class="field-even">Constant OCTOBER_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im Oktober</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.get_september">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">get_september</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.get_september" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: September-Daten generieren</strong></p>
+<p><em>Beschreibung: Berechnen der mittleren 2m-Temperatur und des mittleren Niederschlages im September über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable september</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im September</p>
+</dd>
+<dt class="field-even">Variable september_r</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im September</p>
+</dd>
+<dt class="field-odd">Constant SEPTEMBER_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der 2m-Temperatur im September</p>
+</dd>
+<dt class="field-even">Constant SEPTEMBER_STD</dt>
+<dd class="field-even"><p>Standardabweichung der 2m-Temperatur im September</p>
+</dd>
+<dt class="field-odd">Constant SEPTEMBER_R_MEAN</dt>
+<dd class="field-odd"><p>Mittelwert der Niederschlagsrate im September</p>
+</dd>
+<dt class="field-even">Constant SEPTEMBER_R_STD</dt>
+<dd class="field-even"><p>Standardabweichung der Niederschlagsrate im September</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.plot_months_rain">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">plot_months_rain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.plot_months_rain" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten des Monatsmittels der Niederschlagsrate über 1979-2019 inklusive Standardabweichung</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable monate</dt>
+<dd class="field-odd"><p>Monatsnamen</p>
+</dd>
+<dt class="field-even">Variable monatsmitteltemperaturen</dt>
+<dd class="field-even"><p>Mittelwerte der Niederschlagsrate aller Monate</p>
+</dd>
+<dt class="field-odd">Variable y_err</dt>
+<dd class="field-odd"><p>Standardabweichungen der Niederschlagsrate aller Monate</p>
+</dd>
+<dt class="field-even">Method plt.figure</dt>
+<dd class="field-even"><p>erstellt Figure</p>
+</dd>
+<dt class="field-odd">Method plt.errorbar</dt>
+<dd class="field-odd"><p>erstellt Fehlerbalken</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.plot</dt>
+<dd class="field-odd"><p>führt Daten der x- und y-Achse zusammen</p>
+</dd>
+<dt class="field-even">Method plt.savefig</dt>
+<dd class="field-even"><p>speichert den Plot</p>
+</dd>
+<dt class="field-odd">Method plt.show</dt>
+<dd class="field-odd"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.plot_months_temp">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">plot_months_temp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.plot_months_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten des Monatsmittels der 2m-Temperatur über 1979-2019 inklusive Standardabweichung</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable monate</dt>
+<dd class="field-odd"><p>Monatsnamen</p>
+</dd>
+<dt class="field-even">Variable monatsmitteltemperaturen</dt>
+<dd class="field-even"><p>Mittelwerte der 2m-Temperatur aller Monate</p>
+</dd>
+<dt class="field-odd">Variable y_err</dt>
+<dd class="field-odd"><p>Standardabweichungen der 2m-Temperatur aller Monate</p>
+</dd>
+<dt class="field-even">Method plt.figure</dt>
+<dd class="field-even"><p>erstellt Figure</p>
+</dd>
+<dt class="field-odd">Method plt.errorbar</dt>
+<dd class="field-odd"><p>erstellt Fehlerbalken</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.plot</dt>
+<dd class="field-odd"><p>führt Daten der x- und y-Achse zusammen</p>
+</dd>
+<dt class="field-even">Method plt.savefig</dt>
+<dd class="field-even"><p>speichert den Plot</p>
+</dd>
+<dt class="field-odd">Method plt.show</dt>
+<dd class="field-odd"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.read_data">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">read_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Daten einlesen</strong></p>
+<p><em>Beschreibung: Funktion zum Lesen der netCDF-Datei</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable TEMP</dt>
+<dd class="field-odd"><p>Daten für Temperaturen</p>
+</dd>
+<dt class="field-even">Variable RAIN</dt>
+<dd class="field-even"><p>Daten für Niederschlagsraten</p>
+</dd>
+<dt class="field-odd">Method Dataset</dt>
+<dd class="field-odd"><p>Lesen der Datei</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="three.read_variables">
+<code class="sig-prename descclassname">three.</code><code class="sig-name descname">read_variables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#three.read_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Variablen definieren</strong></p>
+<p><em>Beschreibung: Funktion zum Definieren der Variablen</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable AIRS</dt>
+<dd class="field-odd"><p>Temperatur</p>
+</dd>
+<dt class="field-even">Variable RAINS</dt>
+<dd class="field-even"><p>Niederschlagsrate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-four"></span><p><strong>Titel: Aufgabe 4</strong>
+<em>Autor: Johannes Fleisch</em>
+Beschreibung: Kurzes Programm zum Plotten der saisonalen Mittel der 2m-Temperatur und des Niederschlages über 1979-2019 auf einer Weltkarte.</p>
+<dl class="function">
+<dt id="four.get_fall">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">get_fall</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.get_fall" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Herbst-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Herbstmonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant FALL</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Herbst</p>
+</dd>
+<dt class="field-even">Constant FALL_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Herbst</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.get_spring">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">get_spring</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.get_spring" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Frühlings-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Frühlingsmonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant SPRING</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Frühling</p>
+</dd>
+<dt class="field-even">Constant SPRING_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Frühling</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.get_summer">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">get_summer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.get_summer" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Sommer-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Sommermonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant SUMMER</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Sommer</p>
+</dd>
+<dt class="field-even">Constant SUMMER_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Sommer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.get_winter">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">get_winter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.get_winter" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Winter-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Wintermonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant WINTER</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Winter</p>
+</dd>
+<dt class="field-even">Constant WINTER_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Winter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.plot_fall_rain">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">plot_fall_rain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.plot_fall_rain" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten der mittleren Niederschlagsrate im Herbst über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.plot_fall_temp">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">plot_fall_temp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.plot_fall_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten der mittleren 2m-Temperatur im Herbst über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.plot_spring_rain">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">plot_spring_rain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.plot_spring_rain" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten der mittleren Niederschlagsrate im Frühling über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.plot_spring_temp">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">plot_spring_temp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.plot_spring_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten der mittleren 2m-Temperatur im Frühling über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.plot_summer_rain">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">plot_summer_rain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.plot_summer_rain" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten der mittleren Niederschlagsrate im Sommer über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.plot_summer_temp">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">plot_summer_temp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.plot_summer_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten der mittleren 2m-Temperatur im Sommer über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.plot_winter_rain">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">plot_winter_rain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.plot_winter_rain" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten der mittleren Niederschlagsrate im Winter über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.plot_winter_temp">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">plot_winter_temp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.plot_winter_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten der mittleren 2m-Temperatur im Winter über 1979-2019 auf einer Weltkarte</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.read_data">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">read_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Daten einlesen</strong></p>
+<p><em>Beschreibung: Funktion zum Lesen der netCDF-Datei</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable TEMP</dt>
+<dd class="field-odd"><p>Daten für Temperaturen</p>
+</dd>
+<dt class="field-even">Variable RAIN</dt>
+<dd class="field-even"><p>Daten für Niederschlagsraten</p>
+</dd>
+<dt class="field-odd">Method Dataset</dt>
+<dd class="field-odd"><p>Lesen der Datei</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="four.read_variables">
+<code class="sig-prename descclassname">four.</code><code class="sig-name descname">read_variables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#four.read_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Variablen definieren</strong></p>
+<p><em>Beschreibung: Funktion zum Definieren der Variablen</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable LONS</dt>
+<dd class="field-odd"><p>Längengrad</p>
+</dd>
+<dt class="field-even">Variable LATS</dt>
+<dd class="field-even"><p>Breitengrad</p>
+</dd>
+<dt class="field-odd">Variable AIRS</dt>
+<dd class="field-odd"><p>Temperatur</p>
+</dd>
+<dt class="field-even">Variable RAINS</dt>
+<dd class="field-even"><p>Niederschlagsrate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-five1"></span><p><strong>Titel: Aufgabe 5.1</strong>
+<em>Autor: Johannes Fleisch</em>
+Beschreibung: Kurzes Programm zum Plotten des saisonalen und räumlichen Mittels der 2m-Temperatur über 1979-2019.</p>
+<dl class="function">
+<dt id="five1.get_fall">
+<code class="sig-prename descclassname">five1.</code><code class="sig-name descname">get_fall</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five1.get_fall" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Herbst-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Herbstmonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant FALL</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Herbst</p>
+</dd>
+<dt class="field-even">Constant FALL_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Herbst</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five1.get_spring">
+<code class="sig-prename descclassname">five1.</code><code class="sig-name descname">get_spring</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five1.get_spring" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Frühlings-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Frühlingsmonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant SPRING</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Frühling</p>
+</dd>
+<dt class="field-even">Constant SPRING_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Frühling</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five1.get_summer">
+<code class="sig-prename descclassname">five1.</code><code class="sig-name descname">get_summer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five1.get_summer" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Sommer-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Sommermonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant SUMMER</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Sommer</p>
+</dd>
+<dt class="field-even">Constant SUMMER_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Sommer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five1.get_winter">
+<code class="sig-prename descclassname">five1.</code><code class="sig-name descname">get_winter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five1.get_winter" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Winter-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Wintermonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant WINTER</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Winter</p>
+</dd>
+<dt class="field-even">Constant WINTER_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Winter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five1.plot_violinplot_temp">
+<code class="sig-prename descclassname">five1.</code><code class="sig-name descname">plot_violinplot_temp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five1.plot_violinplot_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten des saisonalen und räumlichen Mittels der 2m-Temperatur über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable win_temp</dt>
+<dd class="field-odd"><p>wandelt Winter-Daten für 2m-Temperatur um</p>
+</dd>
+<dt class="field-even">Variable spr_temp</dt>
+<dd class="field-even"><p>wandelt Frühlings-Daten für 2m-Temperatur um</p>
+</dd>
+<dt class="field-odd">Variable sum_temp</dt>
+<dd class="field-odd"><p>wandelt Sommer-Daten für 2m-Temperatur um</p>
+</dd>
+<dt class="field-even">Variable fal_temp</dt>
+<dd class="field-even"><p>wandelt Herbst-Daten für 2m-Temperatur um</p>
+</dd>
+<dt class="field-odd">Variable temp</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+<dt class="field-even">Variable axair</dt>
+<dd class="field-even"><p>bespielt Diagramm mit Daten</p>
+</dd>
+<dt class="field-odd">Method axair.set_title</dt>
+<dd class="field-odd"><p>erstellt Titel</p>
+</dd>
+<dt class="field-even">Method axair.grid</dt>
+<dd class="field-even"><p>erstellt Raster</p>
+</dd>
+<dt class="field-odd">Method figair.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five1.read_data">
+<code class="sig-prename descclassname">five1.</code><code class="sig-name descname">read_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five1.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Daten einlesen</strong></p>
+<p><em>Beschreibung: Funktion zum Lesen der netCDF-Datei</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable TEMP</dt>
+<dd class="field-odd"><p>Daten für Temperaturen</p>
+</dd>
+<dt class="field-even">Variable RAIN</dt>
+<dd class="field-even"><p>Daten für Niederschlagsraten</p>
+</dd>
+<dt class="field-odd">Method Dataset</dt>
+<dd class="field-odd"><p>Lesen der Datei</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five1.read_variables">
+<code class="sig-prename descclassname">five1.</code><code class="sig-name descname">read_variables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five1.read_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Variablen definieren</strong></p>
+<p><em>Beschreibung: Funktion zum Definieren der Variablen</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable AIRS</dt>
+<dd class="field-odd"><p>Temperatur</p>
+</dd>
+<dt class="field-even">Variable RAINS</dt>
+<dd class="field-even"><p>Niederschlagsrate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-five2"></span><p><strong>Titel: Aufgabe 5.2</strong>
+<em>Autor: Johannes Fleisch</em>
+Beschreibung: Kurzes Programm zum Plotten des saisonalen und räumlichen Mittels des Niederschlages über 1979-2019.</p>
+<dl class="function">
+<dt id="five2.get_fall">
+<code class="sig-prename descclassname">five2.</code><code class="sig-name descname">get_fall</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five2.get_fall" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Herbst-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Herbstmonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant FALL</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Herbst</p>
+</dd>
+<dt class="field-even">Constant FALL_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Herbst</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five2.get_spring">
+<code class="sig-prename descclassname">five2.</code><code class="sig-name descname">get_spring</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five2.get_spring" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Frühlings-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Frühlingsmonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant SPRING</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Frühling</p>
+</dd>
+<dt class="field-even">Constant SPRING_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Frühling</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five2.get_summer">
+<code class="sig-prename descclassname">five2.</code><code class="sig-name descname">get_summer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five2.get_summer" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Sommer-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Sommermonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant SUMMER</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Sommer</p>
+</dd>
+<dt class="field-even">Constant SUMMER_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Sommer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five2.get_winter">
+<code class="sig-prename descclassname">five2.</code><code class="sig-name descname">get_winter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five2.get_winter" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Winter-Daten generieren</strong></p>
+<p><em>Beschreibung: Zusammenführen der 2m-Temperatur bzw. des Niederschlages aller Wintermonate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Constant WINTER</dt>
+<dd class="field-odd"><p>Werte der 2m-Temperatur im Winter</p>
+</dd>
+<dt class="field-even">Constant WINTER_R</dt>
+<dd class="field-even"><p>Werte der Niederschlagsrate im Winter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five2.plot_violinplot_rain">
+<code class="sig-prename descclassname">five2.</code><code class="sig-name descname">plot_violinplot_rain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five2.plot_violinplot_rain" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten des saisonalen und räumlichen Mittels der Niederschlagsrate über 1979-2019</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable win_rain</dt>
+<dd class="field-odd"><p>wandelt Winter-Daten für Niederschlagsraten um</p>
+</dd>
+<dt class="field-even">Variable spr_rain</dt>
+<dd class="field-even"><p>wandelt Frühlings-Daten für Niederschlagsraten um</p>
+</dd>
+<dt class="field-odd">Variable sum_rain</dt>
+<dd class="field-odd"><p>wandelt Sommer-Daten für Niederschlagsraten um</p>
+</dd>
+<dt class="field-even">Variable fal_rain</dt>
+<dd class="field-even"><p>wandelt Herbst-Daten für Niederschlagsraten um</p>
+</dd>
+<dt class="field-odd">Variable rain</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+<dt class="field-even">Variable axrain</dt>
+<dd class="field-even"><p>bespielt Diagramm mit Daten</p>
+</dd>
+<dt class="field-odd">Method axrain.set_title</dt>
+<dd class="field-odd"><p>erstellt Titel</p>
+</dd>
+<dt class="field-even">Method axrain.grid</dt>
+<dd class="field-even"><p>erstellt Raster</p>
+</dd>
+<dt class="field-odd">Method figrain.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five2.read_data">
+<code class="sig-prename descclassname">five2.</code><code class="sig-name descname">read_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five2.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Daten einlesen</strong></p>
+<p><em>Beschreibung: Funktion zum Lesen der netCDF-Datei</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable TEMP</dt>
+<dd class="field-odd"><p>Daten für Temperaturen</p>
+</dd>
+<dt class="field-even">Variable RAIN</dt>
+<dd class="field-even"><p>Daten für Niederschlagsraten</p>
+</dd>
+<dt class="field-odd">Method Dataset</dt>
+<dd class="field-odd"><p>Lesen der Datei</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="five2.read_variables">
+<code class="sig-prename descclassname">five2.</code><code class="sig-name descname">read_variables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#five2.read_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Variablen definieren</strong></p>
+<p><em>Beschreibung: Funktion zum Definieren der Variablen</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable AIRS</dt>
+<dd class="field-odd"><p>Temperatur</p>
+</dd>
+<dt class="field-even">Variable RAINS</dt>
+<dd class="field-even"><p>Niederschlagsrate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-six_"></span><p><strong>Titel: Aufgabe 6</strong>
+<em>Autor: Johannes Fleisch</em>
+Beschreibung: Kurzes Programm zum Plotten des Jahresmittels der 2m-Temperatur und des Niederschlages von 2019 über Österreich.</p>
+<dl class="function">
+<dt id="six_.plot_austria_rain">
+<code class="sig-prename descclassname">six_.</code><code class="sig-name descname">plot_austria_rain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#six_.plot_austria_rain" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten des Jahresmittels des Niederschlages von 2019 über Österreich</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="six_.plot_austria_temp">
+<code class="sig-prename descclassname">six_.</code><code class="sig-name descname">plot_austria_temp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#six_.plot_austria_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Funktion plotten</strong></p>
+<p><em>Beschreibung: Plotten des Jahresmittels der 2m-Temperatur von 2019 über Österreich</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable transform</dt>
+<dd class="field-odd"><p>transformiert Koordinaten</p>
+</dd>
+<dt class="field-even">Variable lons_trans</dt>
+<dd class="field-even"><p>transformierte Längengrade</p>
+</dd>
+<dt class="field-odd">Variable ind</dt>
+<dd class="field-odd"><p>übergibt Indizes der Längengrade</p>
+</dd>
+<dt class="field-even">Variable lons_trans_ind</dt>
+<dd class="field-even"><p>Indizes der transformierten Längengrade</p>
+</dd>
+<dt class="field-odd">Variable airs_new</dt>
+<dd class="field-odd"><p>neue Temperaturdaten</p>
+</dd>
+<dt class="field-even">Variable m</dt>
+<dd class="field-even"><p>erstellt Basemap</p>
+</dd>
+<dt class="field-odd">Variable lon, lat</dt>
+<dd class="field-odd"><p>Längen- und Breitengrade</p>
+</dd>
+<dt class="field-even">Variable xis, yis</dt>
+<dd class="field-even"><p>x- und y-Koordinaten</p>
+</dd>
+<dt class="field-odd">Variale met</dt>
+<dd class="field-odd"><p>spielt die Daten auf die Karte</p>
+</dd>
+<dt class="field-even">Variable cbar</dt>
+<dd class="field-even"><p>erstellt Legende</p>
+</dd>
+<dt class="field-odd">Method plt.figure</dt>
+<dd class="field-odd"><p>erstellt Figure</p>
+</dd>
+<dt class="field-even">Method m.drawparallels</dt>
+<dd class="field-even"><p>zeichnet Breitengrade</p>
+</dd>
+<dt class="field-odd">Method m.drawmeridians</dt>
+<dd class="field-odd"><p>zeichnet Längengrade</p>
+</dd>
+<dt class="field-even">Method m.drawcoastlines</dt>
+<dd class="field-even"><p>zeichnet Küste</p>
+</dd>
+<dt class="field-odd">Method m.drawstates</dt>
+<dd class="field-odd"><p>zeichnet Staaten</p>
+</dd>
+<dt class="field-even">Method m.drawcountries</dt>
+<dd class="field-even"><p>zeichnet Länder</p>
+</dd>
+<dt class="field-odd">Method cbar.set_label</dt>
+<dd class="field-odd"><p>erstellt Legendenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.xlabel</dt>
+<dd class="field-even"><p>erstellt x-Achsenbeschriftung</p>
+</dd>
+<dt class="field-odd">Method plt.ylabel</dt>
+<dd class="field-odd"><p>erstellt y-Achsenbeschriftung</p>
+</dd>
+<dt class="field-even">Method plt.title</dt>
+<dd class="field-even"><p>erstellt Titel</p>
+</dd>
+<dt class="field-odd">Method plt.savefig</dt>
+<dd class="field-odd"><p>speichert den Plot</p>
+</dd>
+<dt class="field-even">Method plt.show</dt>
+<dd class="field-even"><p>zeigt den Plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="six_.read_data">
+<code class="sig-prename descclassname">six_.</code><code class="sig-name descname">read_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#six_.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Daten einlesen</strong></p>
+<p><em>Beschreibung: Funktion zum Lesen der netCDF-Datei</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable TEMP</dt>
+<dd class="field-odd"><p>Daten für Temperaturen</p>
+</dd>
+<dt class="field-even">Variable RAIN</dt>
+<dd class="field-even"><p>Daten für Niederschlagsraten</p>
+</dd>
+<dt class="field-odd">Method Dataset</dt>
+<dd class="field-odd"><p>Lesen der Datei</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="six_.read_variables">
+<code class="sig-prename descclassname">six_.</code><code class="sig-name descname">read_variables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#six_.read_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Titel: Variablen definieren</strong></p>
+<p><em>Beschreibung: Funktion zum Definieren der Variablen</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variable LONS</dt>
+<dd class="field-odd"><p>Längengrad</p>
+</dd>
+<dt class="field-even">Variable LATS</dt>
+<dd class="field-even"><p>Breitengrad</p>
+</dd>
+<dt class="field-odd">Variable AIRS</dt>
+<dd class="field-odd"><p>Temperatur</p>
+</dd>
+<dt class="field-even">Variable RAINS</dt>
+<dd class="field-even"><p>Niederschlagsrate</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Testing.html" class="btn btn-neutral float-left" title="Testing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Johannes Fleisch
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
